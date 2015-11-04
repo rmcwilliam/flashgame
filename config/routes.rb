@@ -10,22 +10,23 @@ Rails.application.routes.draw do
 
   post "/signup", to: "registrations#create"
   delete "/signup", to: "registrations#delete"
-  login "/signup", to: "registrations#login"
 
-  get "/decks/new", to: "decks#new"
+  post "/login", to: "registrations#login"
+
   post "/decks", to: "decks#create"
   get "/decks", to: "decks#index"
   get "/decks/:id", to: "decks#show"
   delete "/decks/:id", to: "decks#destroy"
   put "decks/:id", to: "decks#edit"
 
-  get "/decks/:id/cards/new", to: "cards#new"
   post "/decks/:id/cards", to: "cards#create"
   get "/decks/:id/cards", to: "cards#index"
   delete "/decks/id:/cards", to: "cards#destroy"
   put "/decks/:id/cards", to: "cards#edit"
 
+  post "/guesses", to: "guesses#create"    # send up card ID (docs)
 
+ 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
