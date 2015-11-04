@@ -13,18 +13,18 @@ Rails.application.routes.draw do
 
   post "/login", to: "registrations#login"
 
-  post "/decks", to: "decks#create"
-  get "/decks", to: "decks#index"
-  get "/decks/:id", to: "decks#show"
-  delete "/decks/:id", to: "decks#destroy"
-  put "decks/:id", to: "decks#edit"
+  post "/deck", to: "decks#create" 
+  get "/deck", to: "decks#index"
+  get "/deck/:id", to: "decks#show"
+  delete "/deck/:id", to: "decks#destroy"
+  put "deck/:id", to: "decks#edit"
 
-  post "/decks/:id/cards", to: "cards#create"
-  get "/decks/:id/cards", to: "cards#index"
-  delete "/decks/id:/cards", to: "cards#destroy"
-  put "/decks/:id/cards", to: "cards#edit"
+  post "/deck/:id/card", to: "cards#create"
+  get "/deck/:id/card", to: "cards#index"
+  delete "/deck/id:/card", to: "cards#destroy"
+  put "/deck/:id/card", to: "cards#edit"
 
-  post "/guesses", to: "guesses#create"    # send up card ID (docs)
+  post "/guess", to: "guesses#create"    # send up card ID (docs)
 
  
 
