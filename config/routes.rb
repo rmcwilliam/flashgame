@@ -15,14 +15,15 @@ Rails.application.routes.draw do
 
   post "/deck", to: "decks#create" 
   get "/deck", to: "decks#index"
-  get "/deck/:id", to: "decks#show"
-  delete "/deck/:id", to: "decks#destroy"
-  put "deck/:id", to: "decks#edit"
+  get "/deck/:deck_id", to: "decks#show"
+  delete "/deck/:deck_id", to: "decks#destroy"
+  put "deck/:deck_id", to: "decks#edit"
 
-  post "/deck/:id/card", to: "cards#create"
-  get "/deck/:id/card", to: "cards#index"
-  delete "/deck/id:/card", to: "cards#destroy"
-  put "/deck/:id/card", to: "cards#edit"
+  post "/deck/:deck_id/card", to: "cards#create"
+  get "/deck/:deck_id/card", to: "cards#index"
+  get "/deck/:deck_id/card/:card_id", to: "cards#show"
+  delete "/deck/:deck_id/card/:card_id", to: "cards#destroy"
+  put "/deck/:deck_id/card/:card_id", to: "cards#edit"
 
   post "/guess", to: "guesses#create"    # send up card ID (docs)
 
