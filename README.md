@@ -59,7 +59,7 @@ Otherwise:
 
 }`
 
-## Loggin In
+## Logging In
 ### `POST /login`
 
 #### Params:
