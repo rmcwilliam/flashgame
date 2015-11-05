@@ -91,6 +91,7 @@ If the user could not be created, you should receive status code 422and ...
 ### POST `/deck`
 
 #### Params:
+`title:` need a deck title. must be unique. `description:` describe the deck.
 
 #### Response:
 
@@ -99,21 +100,24 @@ If the user could not be created, you should receive status code 422and ...
 ### GET `/deck`
 
 #### Params:
+Will return all decks
 
 #### Response:
 
 
 ## Show Single Deck
-### GET `/deck/:id`
+### GET `/deck/:deck_id`
 
 #### Params:
+`deck_id:` need a deck id to retrieve individual deck.
 
 #### Response:
 
 ## Delete Deck
-### DELETE `/deck/:id`
+### DELETE `/deck/:deck_id`
 
 #### Params:
+`deck_id:` need a deck id to delete individual deck.
 
 #### Response:
 
@@ -122,6 +126,7 @@ If the user could not be created, you should receive status code 422and ...
 ### PUT `/deck/:id`
 
 #### Params:
+`deck_id:` need a deck id to edit individual deck.
 
 #### Response:
 
@@ -130,6 +135,7 @@ If the user could not be created, you should receive status code 422and ...
 ### POST `/deck/:id/card`
 
 #### Params:
+`deck_id:` need a deck id. `title:` need a title for the card. `question:` need a question for the card. `answer:` need an answer for the card.
 
 #### Response:
 
@@ -138,14 +144,16 @@ If the user could not be created, you should receive status code 422and ...
 ### GET `/deck/:id/card`
 
 #### Params:
+`deck_id:` need deck id to show all cards within.
 
 #### Response:
 
 
 ## Show Card
-### GET `/deck/:id/card/:id`
+### GET `/deck/:deck_id/card/:card_id`
 
 #### Params:
+`deck_id:` need deck id. `card_id:` need card id to show individual card.
 
 #### Response:
 
@@ -154,6 +162,7 @@ If the user could not be created, you should receive status code 422and ...
 ### DELETE `/deck/:id/card/:id`
 
 #### Params:
+`deck_id:` need deck id. `card_id:` need card id to delete individual card.
 
 #### Response:
 
@@ -162,6 +171,7 @@ If the user could not be created, you should receive status code 422and ...
 ### PUT `/deck/:id/card/:id`
 
 #### Params:
+`deck_id:` need deck id. `card_id:` need card id to edit individual card.
 
 #### Response:
 
