@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
 
   post "/signup", to: "registrations#create"
-  delete "/signup", to: "registrations#delete"
+  delete "/signup", to: "registrations#delete" 
 
   post "/login", to: "registrations#login"
 
