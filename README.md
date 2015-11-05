@@ -14,7 +14,7 @@ access token. Otherwise, you'll receive a 401 Forbidden error.
 
 # POST `/signup`
 ### Params:
-username: A username, must be unique. fullname: A user's full name. email: An email address, must be unique. Password: A password.
+`username:` A username, must be unique. `fullname:` A user's full name. `email:` An email address, must be unique. `Password:` A password.
 
 ### Response:
 If the user was created successfully, you should receive status code 201 and ...
@@ -43,7 +43,7 @@ If the user could not be created, you should receive status code 422 and ...
 
 ### Params:
 
-username: Your user account's username. password: Your user account's password
+`username:` Your user account's username. `password:` Your user account's password
 
 ### Response:
 
@@ -64,7 +64,7 @@ Otherwise:
 
 ### Params:
 
-username: String password: String
+`username:` String `password:` String
 
 ### Response:
 
@@ -88,7 +88,7 @@ If the user could not be created, you should receive status code 422and ...
 }`
 
 # Create a Deck
-## `POST /deck`
+## POST `/deck`
 
 ### Params:
 
@@ -96,7 +96,7 @@ If the user could not be created, you should receive status code 422and ...
 
 
 # Show Decks
-## `GET /deck`
+## GET `/deck`
 
 ### Params:
 
