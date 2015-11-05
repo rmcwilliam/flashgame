@@ -76,10 +76,7 @@ Otherwise:
 
 `{
     "user": {
-        "id": 8,
         "username": "apifan",
-        "fullname": "John Doe",
-        "email": "such@api.wow.com",
         "access_token": "9f5b8ebf876121c3fc4c0fa18a511e16"
     }
 }`
