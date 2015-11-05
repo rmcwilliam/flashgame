@@ -50,8 +50,8 @@ If the user could not be created, you should receive status code 422 and ...
 If successful:
 
 `{
-    messages: [
-        "Your account has been successfully deleted"
+    success: [ 
+        "Delete success!"
     ]
 
 }`
