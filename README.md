@@ -10,13 +10,13 @@ To make an authenticated request in any case other than registering
 or deleting an account, you must supply an Access-Token header with a valid
 access token. Otherwise, you'll receive a 401 Forbidden error.
 
-# Registering an Account
+## Registering an Account
 
-# POST `/signup`
-### Params:
+### POST `/signup`
+#### Params:
 `username:` A username, must be unique. `fullname:` A user's full name. `email:` An email address, must be unique. `Password:` A password.
 
-### Response:
+#### Response:
 If the user was created successfully, you should receive status code 201 and ...
 
 `{
@@ -38,14 +38,14 @@ If the user could not be created, you should receive status code 422 and ...
         ]
 }`
 
-# Deleting an Account
-## Delete `/signup`
+## Deleting an Account
+### Delete `/signup`
 
-### Params:
+#### Params:
 
 `username:` Your user account's username. `password:` Your user account's password
 
-### Response:
+#### Response:
 
 If successful:
 
@@ -59,14 +59,14 @@ Otherwise:
 
 }`
 
-# Loggin In
-## `POST /login`
+## Loggin In
+### `POST /login`
 
-### Params:
+#### Params:
 
 `username:` String `password:` String
 
-### Response:
+#### Response:
 
 `{
     "user": {
@@ -87,83 +87,83 @@ If the user could not be created, you should receive status code 422and ...
     ]
 }`
 
-# Create a Deck
-## POST `/deck`
+## Create a Deck
+### POST `/deck`
 
-### Params:
+#### Params:
 
-### Response:
-
-
-# Show Decks
-## GET `/deck`
-
-### Params:
-
-### Response:
+#### Response:
 
 
-# Show Single Deck
-## GET `/deck/:id`
+## Show Decks
+### GET `/deck`
 
-### Params:
+#### Params:
 
-### Response:
-
-# Delete Deck
-## DELETE `/deck/:id`
-
-### Params:
-
-### Response:
+#### Response:
 
 
-# Edit Deck
-## PUT `/deck/:id`
+## Show Single Deck
+### GET `/deck/:id`
 
-### Params:
+#### Params:
 
-### Response:
+#### Response:
 
+## Delete Deck
+### DELETE `/deck/:id`
 
-# Create Card
-## POST `/deck/:id/card`
+#### Params:
 
-### Params:
-
-### Response:
-
-
-# Show Cards
-## GET `/deck/:id/card`
-
-### Params:
-
-### Response:
+#### Response:
 
 
-# Show Card
-## GET `/deck/:id/card/:id`
+## Edit Deck
+### PUT `/deck/:id`
 
-### Params:
+#### Params:
 
-### Response:
-
-
-# Destroy Card
-## DELETE `/deck/:id/card/:id`
-
-### Params:
-
-### Response:
+#### Response:
 
 
-# Edit Card
-## PUT `/deck/:id/card/:id`
+## Create Card
+### POST `/deck/:id/card`
 
-### Params:
+#### Params:
 
-### Response:
+#### Response:
+
+
+## Show Cards
+### GET `/deck/:id/card`
+
+#### Params:
+
+#### Response:
+
+
+## Show Card
+### GET `/deck/:id/card/:id`
+
+#### Params:
+
+#### Response:
+
+
+## Destroy Card
+### DELETE `/deck/:id/card/:id`
+
+#### Params:
+
+#### Response:
+
+
+## Edit Card
+### PUT `/deck/:id/card/:id`
+
+#### Params:
+
+#### Response:
 
 
 
