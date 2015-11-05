@@ -82,6 +82,7 @@ GEM
       slop (~> 3.4)
     puma (2.14.0)
     rack (1.6.4)
+    rack-cors (0.4.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.4)
@@ -161,6 +162,10 @@ DEPENDENCIES
   pg
   pry
   puma
+<<<<<<< HEAD
+=======
+  rack-cors
+>>>>>>> 0b641ba6a3eebebdef8d7e4f5cf5df091a997f9c
   rails (= 4.2.4)
   rails_12factor
   sass-rails (~> 5.0)
