@@ -50,8 +50,8 @@ If the user could not be created, you should receive status code 422 and ...
 If successful:
 
 `{
-    messages: [
-        "Your account has been successfully deleted"
+    success: [ 
+        "Delete success!"
     ]
 
 }`
@@ -76,10 +76,7 @@ Otherwise:
 
 `{
     "user": {
-        "id": 8,
         "username": "apifan",
-        "fullname": "John Doe",
-        "email": "such@api.wow.com",
         "access_token": "9f5b8ebf876121c3fc4c0fa18a511e16"
     }
 }`
