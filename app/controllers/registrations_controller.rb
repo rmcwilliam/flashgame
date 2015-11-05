@@ -29,6 +29,7 @@ class RegistrationsController < ApplicationController
     @user = User.find_by(username: params[:username])
     if @user && @user.authenticate(params[:password])
       @user.destroy
+      render json: {success: "Delete success!"}
     else
       render json: { error: "Invalid username (#{params[:username]}) or password." },
         status: :unauthorized
