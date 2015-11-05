@@ -49,13 +49,19 @@ If the user could not be created, you should receive status code 422 and ...
 
 If successful:
 
-{
+`{
+    messages: [
+        "Your account has been successfully deleted"
+    ]
 
-}
+}`
 
 Otherwise:
 
 `{
+    errors: [
+        "Unable to delete your account"
+    ]
 
 }`
 
@@ -94,6 +100,13 @@ If the user could not be created, you should receive status code 422and ...
 `title:` need a deck title. must be unique. `description:` describe the deck.
 
 #### Response:
+{
+    "deck": {
+        "id": 9,
+        "title": "State Capitals",
+        "description": "a deck that puts the states and asks user to input the capital",
+    }
+}
 
 
 ## Show Decks
