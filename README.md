@@ -123,7 +123,7 @@ Will return all decks
 
 
 ## Edit Deck
-### PUT `/deck/:id`
+### PUT `/deck/:deck_id`
 
 #### Params:
 `deck_id:` need a deck id to edit individual deck.
@@ -132,7 +132,7 @@ Will return all decks
 
 
 ## Create Card
-### POST `/deck/:id/card`
+### POST `/deck/:deck_id/card`
 
 #### Params:
 `deck_id:` need a deck id. `title:` need a title for the card. `question:` need a question for the card. `answer:` need an answer for the card.
@@ -141,7 +141,7 @@ Will return all decks
 
 
 ## Show Cards
-### GET `/deck/:id/card`
+### GET `/deck/:deck_id/card`
 
 #### Params:
 `deck_id:` need deck id to show all cards within.
@@ -159,7 +159,7 @@ Will return all decks
 
 
 ## Destroy Card
-### DELETE `/deck/:id/card/:id`
+### DELETE `/deck/:deck_id/card/:card_id`
 
 #### Params:
 `deck_id:` need deck id. `card_id:` need card id to delete individual card.
@@ -168,7 +168,7 @@ Will return all decks
 
 
 ## Edit Card
-### PUT `/deck/:id/card/:id`
+### PUT `/deck/:deck_id/card/:card_id`
 
 #### Params:
 `deck_id:` need deck id. `card_id:` need card id to edit individual card.
