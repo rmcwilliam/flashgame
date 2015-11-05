@@ -8,6 +8,11 @@ class User < ActiveRecord::Base
   validates_format_of :email, with: /.+@.+\..+/
   validates :access_token, presence: true, uniqueness: true
 
+  # ASSOCIATIONS
+  has_many :decks
+  has_many :cards
+  has_many :guesses
+
   def ensure_access_token!
     if self.access_token.blank?
       self.access_token = User.generate_token
