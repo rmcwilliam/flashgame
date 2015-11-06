@@ -2,7 +2,7 @@ class DecksController < ApplicationController
 
   def create
     @deck = Deck.new(title: params[:title],
-                     user_id: params[:user_id])
+                     user_id: current_user.id)
     if @deck.save
       render "create.json.jbuilder", status: :created
     else
