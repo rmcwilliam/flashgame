@@ -156,6 +156,7 @@ Will return all decks
 
 #### Response:
 
+{success: "Delete deck successful!"}
 
 ## Edit Deck
 ### PUT `/deck/:deck_id`
@@ -165,6 +166,7 @@ Will return all decks
 
 #### Response:
 
+{success: "Edited #{@deck.title} successfully."}
 
 ## Create Card
 ### POST `/deck/:deck_id/card`
