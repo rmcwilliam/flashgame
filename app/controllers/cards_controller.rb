@@ -12,6 +12,8 @@ class CardsController < ApplicationController
   end
 
   def index
+    @cards = Card.all
+    render "index.json.jbuilder", status: :accepted 
   end
 
   def show
