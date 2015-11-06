@@ -178,14 +178,15 @@ Will return all decks with their title and ID
 
 {"deck":{"deck_id":2,"card_id":8,"question":"What is your name?","answer":"your name"}}
 
-## Show Cards
+## Index Of Cards Within A Deck
 ### GET `/deck/:deck_id/card`
 
 #### Params:
-`deck_id:` need deck id to show all cards within.
+`deck_id:` need deck id to show all cards within a deck.
 
 #### Response:
 
+{"cards":[{"question":"What is your name?","answer":"your name","card_id":1},{"question":"What is your name?","answer":"your name","card_id":2}
 
 ## Show Card
 ### GET `/card/:card_id`
