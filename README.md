@@ -185,28 +185,28 @@ Will return all decks
 
 
 ## Show Card
-### GET `/deck/:deck_id/card/:card_id`
+### GET `/card/:card_id`
 
 #### Params:
-`deck_id:` need deck id. `card_id:` need card id to show individual card.
+ `card_id:` need card id to show individual card.
 
 #### Response:
 
 
 ## Destroy Card
-### DELETE `/deck/:deck_id/card/:card_id`
+### DELETE `/card/:card_id/`
 
 #### Params:
-`deck_id:` need deck id. `card_id:` need card id to delete individual card.
+ `card_id:` need card id to delete individual card.
 
 #### Response:
 
 
 ## Edit Card
-### PUT `/deck/:deck_id/card/:card_id`
+### PUT `/card/:card_id`
 
 #### Params:
-`deck_id:` need deck id. `card_id:` need card id to edit individual card.
+`card_id:` need card id to edit individual card.
 
 #### Response:
 
