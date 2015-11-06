@@ -176,6 +176,7 @@ Will return all decks with their title and ID
 
 #### Response:
 
+{"deck":{"deck_id":2,"card_id":8,"question":"What is your name?","answer":"your name"}}
 
 ## Show Cards
 ### GET `/deck/:deck_id/card`
