@@ -81,7 +81,7 @@ Otherwise:
     }
 }`
 
-If the user could not be created, you should receive status code 422and ...
+If the user could not be created, you should receive status code 422 and ...
 
 `{
     "errors": [
@@ -94,14 +94,13 @@ If the user could not be created, you should receive status code 422and ...
 ### POST `/deck`
 
 #### Params:
-`title:` need a deck title. must be unique. `description:` describe the deck.
+`title:` need a deck title. must be unique.
 
 #### Response:
 {
     "deck": {
-        "id": 9,
+        "user_id": 9,
         "title": "State Capitals",
-        "description": "a deck that puts the states and asks user to input the capital",
     }
 }
 
