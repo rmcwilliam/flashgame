@@ -111,7 +111,7 @@ If the user could not be created, you should receive status code 422 and ...
 
 #### Params:
 
-Will return all decks
+Will return all decks with their title and ID
 
 #### Response: 
 {
