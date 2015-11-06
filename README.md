@@ -101,8 +101,10 @@ If the user could not be created, you should receive status code 422 and ...
     "deck": {
         "user_id": 9,
         "title": "State Capitals",
+        "deck_id":13
     }
 }
+
 
 ## Index of Decks
 ### GET `/deck`
