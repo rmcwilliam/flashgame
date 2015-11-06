@@ -94,7 +94,7 @@ If the user could not be created, you should receive status code 422 and ...
 ### POST `/deck`
 
 #### Params:
-`title:` need a deck title. must be unique.
+`title:` Needs a title.
 
 #### Response:
 {
@@ -104,9 +104,33 @@ If the user could not be created, you should receive status code 422 and ...
     }
 }
 
-
-## Show Decks
+## Index of Decks
 ### GET `/deck`
+
+#### Response: 
+{
+  "decks": [
+    {
+      "title": "Fish",
+      "id": 1
+    },
+    {
+      "title": "Birds",
+      "id": 2
+    },
+    {
+      "title": "Lizards",
+      "id": 3
+    },
+    {
+      "title": "Bears",
+      "id": 4
+    },
+    {
+      "title": "Dogs",
+      "id": 5
+    }
+
 
 #### Params:
 Will return all decks
