@@ -17,13 +17,13 @@ Rails.application.routes.draw do
   get "/deck", to: "decks#index"
   get "/deck/:deck_id", to: "decks#show"
   delete "/deck/:deck_id", to: "decks#destroy"
-  put "deck/:deck_id", to: "decks#edit"
+  put "deck/:deck_id", to: "decks#update"
 
   post "/deck/:deck_id/card", to: "cards#create"
   get "/deck/:deck_id/card", to: "cards#index"
-  get "/deck/:deck_id/card/:card_id", to: "cards#show"
-  delete "/deck/:deck_id/card/:card_id", to: "cards#destroy"
-  put "/deck/:deck_id/card/:card_id", to: "cards#edit"
+  get "/card/:card_id", to: "cards#show"
+  delete "/card/:card_id", to: "cards#destroy" 
+  put "/card/:card_id", to: "cards#update"
 
   post "/guess", to: "guesses#create"    # send up card ID (docs)
 
