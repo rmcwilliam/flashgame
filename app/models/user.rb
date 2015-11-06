@@ -10,8 +10,7 @@ class User < ActiveRecord::Base
 
   # ASSOCIATIONS
   has_many :decks
-  has_many :cards
-  has_many :guesses
+  has_many :cards, through :guesses
 
   def ensure_access_token!
     if self.access_token.blank?

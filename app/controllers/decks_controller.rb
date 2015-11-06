@@ -14,12 +14,12 @@ class DecksController < ApplicationController
   def index
     @decks = Deck.all
     render "index.json.jbuilder", status: :accepted 
-  else
-    render json: {status: "Does not Compute"}
   end
 
 
   def show
+     @deck = Deck.find_by(id: params[:deck_id])
+    render "show.json.jbuilder", status: :accepted 
   end
 
   def destroy

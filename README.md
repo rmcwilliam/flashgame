@@ -107,6 +107,10 @@ If the user could not be created, you should receive status code 422 and ...
 ## Index of Decks
 ### GET `/deck`
 
+#### Params:
+
+Will return all decks
+
 #### Response: 
 {
   "decks": [
@@ -132,12 +136,6 @@ If the user could not be created, you should receive status code 422 and ...
     }
 
 
-#### Params:
-Will return all decks
-
-#### Response:
-
-
 ## Show Single Deck
 ### GET `/deck/:deck_id`
 
@@ -145,6 +143,8 @@ Will return all decks
 `deck_id:` need a deck id to retrieve individual deck.
 
 #### Response:
+
+{"deck":{"title":"atlanta","deck_id":6}}
 
 ## Delete Deck
 ### DELETE `/deck/:deck_id`
