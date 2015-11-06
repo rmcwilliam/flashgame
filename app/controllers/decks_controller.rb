@@ -23,17 +23,23 @@ class DecksController < ApplicationController
   end
 
   def destroy
-    @deck = Deck.find_by(title: params[:title])
-    if current_user.id && @deck.user_id(params[:user_id])
+    @deck = Deck.find_by(id: params[:deck_id])
+    if @deck && current_user.id == @deck.user_id
       @deck.destroy
-      render json: {success: "Delete deck successful!"}
+      render json: {success: "Delete deck successful!"}, status: :accepted 
     else
       render json: { error: "Unable to delete the deck." },
              status: :unauthorized
     end
   end
 
-  def edit
+  def update
+   @deck = Deck.find_by(id: params[:deck_id])
+   if @deck && current_user.id == @deck.user_id
+     @deck.update(title: params[:title])
+     render json: {success: "Edited #{@deck.title} successfully."}, status: :accepted
+   else
+     render json: { error: "Unable to edit deck: #{@deck.title}"}, status: :unauthorized
+    end       
   end
-
 end
