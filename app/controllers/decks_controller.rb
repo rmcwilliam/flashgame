@@ -37,9 +37,9 @@ class DecksController < ApplicationController
    @deck = Deck.find_by(id: params[:deck_id])
    if @deck && current_user.id == @deck.user_id
      @deck.update(title: params[:title])
-     render json: {success: "Edited #{@deck.title} successfully."}, status: :accepted
+     render json: {success: "Title: #{@deck.title}"}, status: :accepted
    else
-     render json: { error: "Unable to edit deck: #{@deck.title}"}, status: :unauthorized
+     render json: { error: "Unable to edit deck"}, status: :unauthorized
     end       
   end
 end
