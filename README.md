@@ -215,7 +215,7 @@ Will return all decks with their title and ID
 
 #### Response:
 
-{"success":"Title: Is the sky green? Answer: No."}
+{"success":"Question: Is the sky green? Answer: No."}
 
 
 
