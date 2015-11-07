@@ -24,11 +24,10 @@ class CardsController < ApplicationController
   def destroy
      @card = Card.find_by(id: params[:card_id])
     if @card && current_user.id == @card.deck.user_id
-      @deck.destroy
+      @card.destroy
       render json: {success: "Delete card successful!"}, status: :accepted 
     else
-      render json: { error: "Unable to delete the card." },
-             status: :unauthorized
+      render json: { error: "Unable to delete the card." }, status: :unauthorized
     end
   end
 
