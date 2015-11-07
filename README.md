@@ -7,8 +7,7 @@ A flashcard game where a user tries to guess the correct answer in a given time.
 ## Authentication Notes:
 
 To make an authenticated request in any case other than registering
-or deleting an account, you must supply an Access-Token header with a valid
-access token. Otherwise, you'll receive a 401 Forbidden error.
+or deleting an account, you must supply an `Access-Token` as written in the header along with a valid long string of numbers and letters as the value. Otherwise, you'll receive a 401 Forbidden error.
 
 ## Registering an Account
 
@@ -50,8 +49,8 @@ If the user could not be created, you should receive status code 422 and ...
 If successful:
 
 `{
-    success: [ 
-        "Delete success!"
+    success:[ 
+        "Account delete successful!"
     ]
 
 }`
@@ -94,7 +93,7 @@ If the user could not be created, you should receive status code 422 and ...
 ### POST `/deck`
 
 #### Params:
-`title:` Needs a title.
+`title:` Must be given a title.
 
 #### Response:
 {
@@ -142,7 +141,7 @@ Will return all decks with their title and ID
 ### GET `/deck/:deck_id`
 
 #### Params:
-`deck_id:` need a deck id to retrieve individual deck.
+`deck_id:` Must provide deck id to retrieve individual deck.
 
 #### Response:
 
@@ -152,47 +151,47 @@ Will return all decks with their title and ID
 ### DELETE `/deck/:deck_id`
 
 #### Params:
-`deck_id:` need a deck id to delete individual deck.
+`deck_id:` Must provide a deck id to delete individual deck.
 
 #### Response:
 
-{success: "Delete deck successful!"}
+{success: "Deck delete deck successful!"}
 
-## Edit Deck
+## Update Deck
 ### PUT `/deck/:deck_id`
 
 #### Params:
-`deck_id:` need a deck id to edit individual deck.
+`deck_id:` Must provide a deck id to update an individual deck.
 
 #### Response:
 
-{success: "Edited #{@deck.title} successfully."}
+{success: "Edited **title** successfully."}
 
 ## Create Card
 ### POST `/deck/:deck_id/card`
 
 #### Params:
-`deck_id:` need a deck id. `title:` need a title for the card. `question:` need a question for the card. `answer:` need an answer for the card.
+`deck_id:` deck id. `title:` title for the card. `question:` question for the card. `answer:` answer for the card.
 
 #### Response:
 
-{"deck":{"deck_id":2,"card_id":8,"question":"What is your name?","answer":"your name"}}
+{"deck":{"deck_id":2,"card_id":8,"question":"Which way is out?","answer":"That way."}}
 
 ## Index Of Cards Within A Deck
 ### GET `/deck/:deck_id/card`
 
 #### Params:
-`deck_id:` need deck id to show all cards within a deck.
+`deck_id:` Must provide a deck id to access all cards within a deck.
 
 #### Response:
 
-{"cards":[{"question":"What is your name?","answer":"your name","card_id":1},{"question":"What is your name?","answer":"your name","card_id":2}
+{"cards":[{"question":"What time is it?","answer":"8:27pm","card_id":1},{"question":"Have you ever found gold?","answer":"Once, in a creek.","card_id":2}
 
 ## Show Card
 ### GET `/card/:card_id`
 
 #### Params:
- `card_id:` need card id to show individual card.
+ `card_id:` Must provide a card id to show individual card.
 
 #### Response:
 
@@ -201,16 +200,16 @@ Will return all decks with their title and ID
 ### DELETE `/card/:card_id/`
 
 #### Params:
- `card_id:` need card id to delete individual card.
+ `card_id:` Must provide card id to delete individual card.
 
 #### Response:
 
 
-## Edit Card
+## Update Card
 ### PUT `/card/:card_id`
 
 #### Params:
-`card_id:` need card id to edit individual card.
+`card_id:` Must provide card id to update individual card.
 
 #### Response:
 
