@@ -145,7 +145,7 @@ Will return all decks with their title and ID
 
 #### Response:
 
-{"deck":{"title":"atlanta","deck_id":6}}
+{"deck":{"title":"birds","deck_id":11,"user_id":9}}
 
 ## Delete Deck
 ### DELETE `/deck/:deck_id`
@@ -155,7 +155,7 @@ Will return all decks with their title and ID
 
 #### Response:
 
-{success: "Deck delete deck successful!"}
+{success: "Deck delete successful!"}
 
 ## Update Deck
 ### PUT `/deck/:deck_id`
@@ -165,7 +165,7 @@ Will return all decks with their title and ID
 
 #### Response:
 
-{success: "Edited **title** successfully."}
+{success: "Title: "new title" "}
 
 ## Create Card
 ### POST `/deck/:deck_id/card`
@@ -195,15 +195,17 @@ Will return all decks with their title and ID
 
 #### Response:
 
+{"card":{"question":"Is earth round?","answer":"Yes.","deck_id":4}}
 
 ## Destroy Card
 ### DELETE `/card/:card_id/`
 
 #### Params:
- `card_id:` Must provide card id to delete individual card.
+ `card_id:` Must provide card id to delete individual card. 
 
 #### Response:
 
+{"success":"Card delete successful!"}
 
 ## Update Card
 ### PUT `/card/:card_id`
@@ -213,6 +215,7 @@ Will return all decks with their title and ID
 
 #### Response:
 
+{"success":"Title: Is the sky green? Answer: No."}
 
 
 
