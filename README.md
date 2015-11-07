@@ -195,6 +195,7 @@ Will return all decks with their title and ID
 
 #### Response:
 
+{"card":{"question":"Is earth round?","answer":"Yes.","deck_id":4}}
 
 ## Destroy Card
 ### DELETE `/card/:card_id/`
