@@ -155,7 +155,7 @@ Will return all decks with their title and ID
 
 #### Response:
 
-{success: "Deck delete deck successful!"}
+{success: "Deck delete successful!"}
 
 ## Update Deck
 ### PUT `/deck/:deck_id`
@@ -165,7 +165,7 @@ Will return all decks with their title and ID
 
 #### Response:
 
-{success: "Edited **title** successfully."}
+{success: "Edited "title" successfully."}
 
 ## Create Card
 ### POST `/deck/:deck_id/card`
