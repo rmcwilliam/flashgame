@@ -145,7 +145,7 @@ Will return all decks with their title and ID
 
 #### Response:
 
-{"deck":{"title":"atlanta","deck_id":6}}
+{"deck":{"title":"birds","deck_id":11,"user_id":9}}
 
 ## Delete Deck
 ### DELETE `/deck/:deck_id`
