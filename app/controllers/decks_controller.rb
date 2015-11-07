@@ -26,7 +26,7 @@ class DecksController < ApplicationController
     @deck = Deck.find_by(id: params[:deck_id])
     if @deck && current_user.id == @deck.user_id
       @deck.destroy
-      render json: {success: "Delete deck successful!"}, status: :accepted 
+      render json: {success: "Deck delete successful!"}, status: :accepted 
     else
       render json: { error: "Unable to delete the deck." },
              status: :unauthorized
