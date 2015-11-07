@@ -165,7 +165,7 @@ Will return all decks with their title and ID
 
 #### Response:
 
-{success: "Edited "title" successfully."}
+{success: "Title: "new title" "}
 
 ## Create Card
 ### POST `/deck/:deck_id/card`
@@ -201,10 +201,11 @@ Will return all decks with their title and ID
 ### DELETE `/card/:card_id/`
 
 #### Params:
- `card_id:` Must provide card id to delete individual card.
+ `card_id:` Must provide card id to delete individual card. 
 
 #### Response:
 
+{"success":"Card delete successful!"}
 
 ## Update Card
 ### PUT `/card/:card_id`
@@ -214,6 +215,7 @@ Will return all decks with their title and ID
 
 #### Response:
 
+{"success":"Title: Is the sky green? Answer: No."}
 
 
 
