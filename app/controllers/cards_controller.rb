@@ -25,19 +25,22 @@ class CardsController < ApplicationController
      @card = Card.find_by(id: params[:card_id])
     if @card && current_user.id == @card.deck.user_id
       @card.destroy
-      render json: {success: "Delete card successful!"}, status: :accepted 
+      render json: {success: "Card delete successful!"}, status: :accepted 
     else
       render json: { error: "Unable to delete the card." }, status: :unauthorized
     end
   end
 
   def update
+    @card = Card.find_by(id: params[:card_id])
+   if @card && current_user.id == @card.deck.user_id
+     @card.update(question: params[:question], answer: params[:answer])
+     render json: {success: "Title: #{@card.question} Answer: #{@card.answer}"},
+      status: :accepted
+   else
+     render json: { error: "Unable to edit card"}, status: :unauthorized
+    end       
   end
 
 end
 
-# post "/deck/:deck_id/card", to: "cards#create"
-#   get "/deck/:deck_id/card", to: "cards#index"
-#   get "/card/:card_id", to: "cards#show"
-#   delete "/card/:card_id", to: "cards#destroy" 
-#   put "/card/:card_id", to: "cards#update"
