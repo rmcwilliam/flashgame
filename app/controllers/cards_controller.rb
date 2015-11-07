@@ -2,12 +2,12 @@ class CardsController < ApplicationController
 
   def create
     @card = Card.new(question: params[:question],
-                     answer: params[:answer], deck_id: params[:deck_id])
+                     answer: params[:answer], 
+                     deck_id: params[:deck_id])
     if @card.save
       render "create.json.jbuilder", status: :created
     else
-      render json: { errors: @card.errors.full_messages },
-             status: :unprocessable_entity
+      render json: { errors: @card.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
@@ -17,12 +17,14 @@ class CardsController < ApplicationController
   end
 
   def show
+    @card = Card.find_by(id: params[:card_id])
+    render "show.json.jbuilder", status: :accepted 
   end
 
   def destroy
   end
 
-  def edit
+  def update
   end
 
 end
