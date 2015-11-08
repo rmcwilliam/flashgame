@@ -187,7 +187,7 @@ Will return all decks with their title and ID
 
 #### Response:
 
-{
+`{
   "cards": [
     {
       "card_id": 7,
@@ -205,7 +205,7 @@ Will return all decks with their title and ID
       "answer": "Ruff ruff"
     }
   ]
-}
+}`
 
 ## Show Card
 ### GET `/card/:card_id`
