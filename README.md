@@ -98,13 +98,13 @@ If the user could not be created, you should receive status code 422 and ...
 `title:` Must be given a title.
 
 #### Response:
-{
+`{
     "deck": {
         "user_id": 9,
         "title": "State Capitals",
         "deck_id":13
     }
-}
+}`
 
 
 ## Index of Decks
@@ -115,7 +115,7 @@ If the user could not be created, you should receive status code 422 and ...
 Will return all decks with their title and ID
 
 #### Response: 
-{
+`{
   "decks": [
     {
       "title": "Fish",
@@ -136,7 +136,7 @@ Will return all decks with their title and ID
     {
       "title": "Dogs",
       "id": 5
-    }
+    }`
 
 
 ## Show Single Deck
@@ -147,7 +147,7 @@ Will return all decks with their title and ID
 
 #### Response:
 
-{"deck":{"title":"birds","deck_id":11,"user_id":9}}
+`{"deck":{"title":"birds","deck_id":11,"user_id":9}}`
 
 ## Delete Deck
 ### DELETE `/deck/:deck_id`
@@ -157,7 +157,7 @@ Will return all decks with their title and ID
 
 #### Response:
 
-{success: "Deck delete successful!"}
+`{success: "Deck delete successful!"}`
 
 ## Update Deck
 ### PUT `/deck/:deck_id`
@@ -167,7 +167,7 @@ Will return all decks with their title and ID
 
 #### Response:
 
-{success: "Title: "new title" "}
+`{success: "Title: "new title" "}`
 
 ## Create Card
 ### POST `/deck/:deck_id/card`
@@ -177,7 +177,7 @@ Will return all decks with their title and ID
 
 #### Response:
 
-{"deck":{"deck_id":2,"card_id":8,"question":"Which way is out?","answer":"That way."}}
+`{"deck":{"deck_id":2,"card_id":8,"question":"Which way is out?","answer":"That way."}}`
 
 ## Index Of Cards Within A Deck
 ### GET `/deck/:deck_id/card`
@@ -187,7 +187,7 @@ Will return all decks with their title and ID
 
 #### Response:
 
-{"cards":[{"question":"What time is it?","answer":"8:27pm","card_id":1},{"question":"Have you ever found gold?","answer":"Once, in a creek.","card_id":2}
+`{"cards":[{"question":"What time is it?","answer":"8:27pm","card_id":1},{"question":"Have you ever found gold?","answer":"Once, in a creek.","card_id":2}`
 
 ## Show Card
 ### GET `/card/:card_id`
@@ -197,7 +197,7 @@ Will return all decks with their title and ID
 
 #### Response:
 
-{"card":{"question":"Is earth round?","answer":"Yes.","deck_id":4}}
+`{"card":{"question":"Is earth round?","answer":"Yes.","deck_id":4}}`
 
 ## Destroy Card
 ### DELETE `/card/:card_id/`
@@ -207,7 +207,7 @@ Will return all decks with their title and ID
 
 #### Response:
 
-{"success":"Card delete successful!"}
+`{"success":"Card delete successful!"}`
 
 ## Update Card
 ### PUT `/card/:card_id`
@@ -216,20 +216,20 @@ Will return all decks with their title and ID
 `card_id:` Must provide card id to update individual card.
 
 #### Response:
-`
-{"success":"Question: Is the sky green? Answer: No."}
+
+`{"success":"Question: Is the sky green? Answer: No."}`
 
 ## Make a guess
-### Post `/guess` 
+### POST `/guess` 
 
 #### Params:
 
-`card_id:` Must provide card_id to submit a guesss for a card. 'time:' Must provide time as an integer. `correct_answer:` Must provide boolean `true` or `false`.
+`card_id:` Must provide card_id to submit a guesss for a card. `time:` Must provide time as an integer. `correct_answer:` Must provide boolean `true` or `false`.
 
 #### Response:
 
-` response status code: 201
-{
+` response status code: 201`
+`{
   "guess": {
     "user_id": 4,
     "deck_id": 4,
@@ -237,7 +237,7 @@ Will return all decks with their title and ID
     "duration": 180,
     "correct_answer": false
   }
-} `
+}` 
 
 
 
