@@ -187,25 +187,25 @@ Will return all decks with their title and ID
 
 #### Response:
 
-`{
+{
   "cards": [
     {
-      "id": 7,
+      "card_id": 7,
       "question": "What is your name?",
       "answer": "your name"
     },
     {
-      "id": 8,
+      "card_id": 8,
       "question": "What is your name?",
       "answer": "your name"
     },
     {
-      "id": 9,
+      "card_id": 9,
       "question": "What sound does a dog make?",
       "answer": "Ruff ruff"
     }
   ]
-}`
+}
 
 ## Show Card
 ### GET `/card/:card_id`
