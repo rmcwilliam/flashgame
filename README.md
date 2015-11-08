@@ -1,7 +1,7 @@
 # API 
 
 ##Overview
-Data cna be accessed from the "https://damp-cliffs-8775.herokuapp.com" domain. All requests and responses will formatted as JSON.
+Data can be accessed from the "https://damp-cliffs-8775.herokuapp.com" domain. All requests and responses will formatted as JSON.
 
 
 ## Authentication Notes:
@@ -216,8 +216,30 @@ Will return all decks with their title and ID
 `card_id:` Must provide card id to update individual card.
 
 #### Response:
-
+`
 {"success":"Question: Is the sky green? Answer: No."}
+
+## Make a guess
+### Post `/guess` 
+
+#### Params:
+
+`card_id:` Must provide card_id to submit a guesss for a card. 'time:' Must provide time as an integer. `correct_answer:` Must provide boolean `true` or `false`.
+
+#### Response:
+
+` response status code: 201
+{
+  "guess": {
+    "user_id": 4,
+    "deck_id": 4,
+    "card_id": 10,
+    "duration": 180,
+    "correct_answer": false
+  }
+} `
+
+
 
 
 
