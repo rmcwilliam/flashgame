@@ -1,13 +1,15 @@
-# Flashgame
+# API 
 
-A flashcard game where a user tries to guess the correct answer in a given time.
+##Overview
+Data cna be accessed from the "https://damp-cliffs-8775.herokuapp.com" domain. All requests and responses will formatted as JSON.
 
-# API
 
 ## Authentication Notes:
 
 To make an authenticated request in any case other than registering
 or deleting an account, you must supply an `Access-Token` as written in the header along with a valid long string of numbers and letters as the value. Otherwise, you'll receive a 401 Forbidden error.
+
+`['Access-Token'] = '9f5b8ebf876121c3fc4c0fa18a511e16' `
 
 ## Registering an Account
 

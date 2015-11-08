@@ -12,8 +12,8 @@ class ApplicationController < ActionController::Base
   def authenticate_user!
     unless current_user
       token = request.headers['Access-Token']
-      render json: { error: "Could not authenticate with token:'#{token}'" },
-             status: :unauthorized
+       render json: { error: "Could not authenticate with token:'#{token}'" },
+        status: :unauthorized
     end
   end
 
