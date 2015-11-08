@@ -13,9 +13,11 @@ class CardsController < ApplicationController
   end
 
   def index
-    @cards = Card.all
-    render "index.json.jbuilder", status: :accepted 
+    @deck = Deck.find_by(id: params[:deck_id])
+    @cards = @deck.cards
+    render "index.json.jbuilder", status: :accepted
   end
+
 
   def show
     @card = Card.find_by(id: params[:card_id])
