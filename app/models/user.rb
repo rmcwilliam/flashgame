@@ -8,7 +8,6 @@ class User < ActiveRecord::Base
   validates_format_of :email, with: /.+@.+\..+/
   validates :access_token, presence: true, uniqueness: true
 
-  # ASSOCIATIONS
   has_many :decks
   has_many :cards, through: :guesses
 

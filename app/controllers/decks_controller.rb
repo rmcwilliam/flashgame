@@ -1,4 +1,5 @@
 class DecksController < ApplicationController
+  before_action :authenticate_user!, only: [:create, :destroy, :update]
 
   def create
     @deck = Deck.new(title: params[:title],

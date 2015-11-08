@@ -1,6 +1,6 @@
 class Deck < ActiveRecord::Base
-
-  validates_presence_of :title
+  validates :user_id, presence: true
+  validates :title, presence: true
 
   belongs_to :user
   has_many :cards
