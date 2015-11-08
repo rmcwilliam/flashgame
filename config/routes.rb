@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   delete "/card/:card_id", to: "cards#destroy" 
   put "/card/:card_id", to: "cards#update"
 
-  post "/guess", to: "guesses#create"    # send up card ID (docs)
+  post "/guess", to: "guesses#new"  
 
  
 
