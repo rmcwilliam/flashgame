@@ -228,7 +228,6 @@ Will return all decks with their title and ID
 
 #### Response:
 
-` response status code: 201`
 `{
   "guess": {
     "user_id": 4,
