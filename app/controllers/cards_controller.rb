@@ -1,4 +1,5 @@
 class CardsController < ApplicationController
+  before_action :authenticate_user!, only: [:create, :destroy, :update]
 
   def create
     @card = Card.new(question: params[:question],
