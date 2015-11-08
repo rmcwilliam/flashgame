@@ -187,25 +187,25 @@ Will return all decks with their title and ID
 
 #### Response:
 
-`{
+{
   "cards": [
     {
+      "card_id": 7,
       "question": "What is your name?",
-      "answer": "Ryan",
-      "card_id": 7
+      "answer": "your name"
     },
     {
+      "card_id": 8,
       "question": "What is your name?",
-      "answer": "Bob",
-      "card_id": 8
+      "answer": "your name"
     },
     {
+      "card_id": 9,
       "question": "What sound does a dog make?",
-      "answer": "Ruff ruff",
-      "card_id": 9
+      "answer": "Ruff ruff"
     }
   ]
-}`
+}
 
 ## Show Card
 ### GET `/card/:card_id`
@@ -215,7 +215,14 @@ Will return all decks with their title and ID
 
 #### Response:
 
-`{"card":{"question":"Is earth round?","answer":"Yes.","deck_id":4}}`
+`{
+  "card": {
+    "question": "Why do plants like sunlight?",
+    "answer": "Photosynthesis",
+    "deck_id": 4,
+    "card_id": 10
+  }
+}`
 
 ## Destroy Card
 ### DELETE `/card/:card_id/`
