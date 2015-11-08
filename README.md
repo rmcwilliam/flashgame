@@ -187,7 +187,25 @@ Will return all decks with their title and ID
 
 #### Response:
 
-`{"cards":[{"question":"What time is it?","answer":"8:27pm","card_id":1},{"question":"Have you ever found gold?","answer":"Once, in a creek.","card_id":2}`
+`{
+  "cards": [
+    {
+      "question": "What is your name?",
+      "answer": "Ryan",
+      "card_id": 7
+    },
+    {
+      "question": "What is your name?",
+      "answer": "Bob",
+      "card_id": 8
+    },
+    {
+      "question": "What sound does a dog make?",
+      "answer": "Ruff ruff",
+      "card_id": 9
+    }
+  ]
+}`
 
 ## Show Card
 ### GET `/card/:card_id`
