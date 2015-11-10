@@ -32,10 +32,17 @@ class CardsController < ApplicationController
 
   def update
     @card = Card.find_by(id: params[:card_id])
+    if @card && current_user.id == @card.deck.user_id
      @card.update(question: params[:question], answer: params[:answer])
-     render json: {success: "Title: #{@card.question} Answer: #{@card.answer}"},
-      status: :accepted     
+      render json: {success: "Title: #{@card.question} Answer: #{@card.answer}"},
+      status: :accepted   
+    else    
+      render json: { error: "Unable to edit card"}, status: :unauthorized    
+    end
   end
 
 end
 
+
+
+ 
