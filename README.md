@@ -153,7 +153,8 @@ Will return all decks with their title and ID
 ### DELETE `/deck/:deck_id`
 
 #### Params:
-`deck_id:` Must provide a deck id to delete individual deck.
+`deck_id:` Must provide a deck id to delete individual deck. The user deleting the deck must also be the user that created the deck being deleted.
+
 
 #### Response:
 
@@ -163,7 +164,8 @@ Will return all decks with their title and ID
 ### PUT `/deck/:deck_id`
 
 #### Params:
-`deck_id:` Must provide a deck id to update an individual deck.
+`deck_id:` Must provide a deck id to update an individual deck. The user updating the deck must also be the user that created the deck being updated.
+
 
 #### Response:
 
@@ -228,7 +230,7 @@ Will return all decks with their title and ID
 ### DELETE `/card/:card_id/`
 
 #### Params:
- `card_id:` Must provide card id to delete individual card. 
+ `card_id:` Must provide card id to delete individual card. The user deleting the card must also be the user that created the deck and the card being deleted.
 
 #### Response:
 
@@ -238,7 +240,8 @@ Will return all decks with their title and ID
 ### PUT `/card/:card_id`
 
 #### Params:
-`card_id:` Must provide card id to update individual card.
+`card_id:` Must provide card id to update individual card. The user updating the card must also be the user that created the deck and the card being updated.
+
 
 #### Response:
 
