@@ -41,7 +41,7 @@ group :development, :test do
   gem 'byebug'
 
   # use Rspec for testing
-  gem 'rspec'
+  gem 'rspec-rails'
 end
 
 group :development do
