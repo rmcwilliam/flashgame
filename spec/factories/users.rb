@@ -5,9 +5,9 @@ FactoryGirl.define do
     email 'rmcwilliam@gmail.com'
 
     trait :julia do
-      fullname ''
-      username 'julia01'
-      email 'julia@gmail.com'
+      fullname 'julia kofron'
+      username 'jkofron'
+      email 'jkofron@gmail.com'
     end
   end
 end
