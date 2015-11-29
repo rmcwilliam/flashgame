@@ -42,6 +42,9 @@ group :development, :test do
 
   # use Rspec for testing
   gem 'rspec-rails'
+
+  # use factory girl build models and attributes 
+  gem 'factory_girl_rails'
 end
 
 group :development do
