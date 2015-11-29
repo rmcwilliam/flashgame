@@ -30,6 +30,9 @@ gem 'bcrypt', '~> 3.1.7'
 # using rack-cors
 gem 'rack-cors'
 
+# use Rspec for testing
+gem 'rspec'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
