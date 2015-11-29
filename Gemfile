@@ -30,9 +30,6 @@ gem 'bcrypt', '~> 3.1.7'
 # using rack-cors
 gem 'rack-cors'
 
-# use Rspec for testing
-gem 'rspec'
-
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -42,6 +39,9 @@ gem 'rspec'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+  # use Rspec for testing
+  gem 'rspec'
 end
 
 group :development do
